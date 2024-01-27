@@ -1,0 +1,76 @@
+
+
+
+
+\\ Как делалась галлерея
+.projects__gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.gallery--item {
+  grid-area: span 2; // Для того, чтобы занимать 2 места.
+}
+
+
+\\ Как делался счетчик для списка <ol>
+.why__inner-list {
+  list-style-type: none;
+  counter-reset: my-counter;
+  padding-left: 10px;
+}
+.why__inner-item::before {
+  content: counter(my-counter);
+  counter-increment: my-counter;
+  padding-right: 5px;
+}
+
+-- чтобы добавить 0 в начало счетчика
+.work__list {
+  list-style-type: none;
+  counter-reset: my-counter;
+}
+
+.work__item::before {
+  content: counter(my-counter, decimal-leading-zero);
+  counter-increment: my-counter;
+}
+
+// м² можна викорастати спеціальний тег sup 
+
+
+// button and input Треба окремо прописувати колір та властивості шрифта. Тому що в них вони свої за замовчуваннм і не наслідуються в батьківсткого елемента.
+
+// Для того, щоб займало з 1 колонки до -1
+.contact-form__images {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.contact-form__img--mod {
+  grid-column: 1 / -1;
+}
+
+
+
+// використання списку dl. модна писати dt і до нього декілька значень dd
+<dl class="contacts__info">
+  <dt>Телефон</dt>
+  <dd>
+    <a href="tel:+38099299996">+38 099 299 996</a>
+  </dd>
+  <dd>
+    <a href="tel:+38099299996">+38 099 299 996</a> // наприклад як тут.
+  </dd>
+  <dt>Адреса</dt>
+  <dd>м. Київ, вул. Зелена, 5б</dd>
+  <dt>Графік роботи</dt>
+  <dd>пн-сб з 10:00 до 20:00</dd>
+</dl>
+
+
+
+https://www.youtube.com/watch?v=jiq1kWolQbQ
