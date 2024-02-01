@@ -1,7 +1,4 @@
 
-
-
-
 \\ Как делалась галлерея
 .projects__gallery {
   display: grid;
@@ -71,6 +68,40 @@
   <dd>пн-сб з 10:00 до 20:00</dd>
 </dl>
 
+Чтобы добавить множественные элементы декора на как в макете. нужно создать main 8 дивов. 
+.main {
+  position: relative;
+}
+
+на каждый див поставить фоновое изображение. И потом двигать каждый див куда нужно.
+Также при адаптиве можно будет заменить пути к картинкам, чтобы изменить изображение.
+
+const swiper = new Swiper('.reviews__slider', {
+
+  slidesPerView: 2,
+  spaceBetween: 22,
+  loop: true,
+
+  navigation: {
+    nextEl: '.reviews__item-next',
+    prevEl: '.reviews__item-prev',
+  },
+
+});
+
+// Зрбити підводку на каунтері
+.work__item::before {
+  content: counter(my-counter, decimal-leading-zero);
+  counter-increment: my-counter;
+  font-family: "Kaisei Decol", serif;
+  font-weight: 400;
+  font-size: 128px;
+  letter-spacing: -12.8px;
+  color: rgba(109, 151, 115, 0.20);
+  position: absolute;
+  left: 0;
+  -webkit-text-stroke: 1px rgb(109, 151, 115);
+}
 
 
 https://www.youtube.com/watch?v=jiq1kWolQbQ

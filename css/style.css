@@ -37,8 +37,8 @@ body {
 }
 
 .container {
-  max-width: 1220px;
-  padding: 0 10px;
+  max-width: 1240px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -48,6 +48,20 @@ body {
   margin-bottom: 50px;
 }
 
+.section-mb {
+  margin-bottom: 150px;
+}
+.section-ms {
+  margin-bottom: 110px;
+}
+
+.main {
+  /* position: relative; */
+  background-image: url('../images/decor/dec-full.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
 
 /* header */
 .header {
@@ -126,10 +140,6 @@ body {
 
 
 /* about */
-.about {
-  margin-bottom: 150px;
-}
-
 .about__inner {
   display: flex;
   gap: 22px;
@@ -169,9 +179,6 @@ body {
 
 
 /* why */
-.why {
-  margin-bottom: 150px;
-}
 .why__text {
   max-width: 580px;
   font-weight: 600;
@@ -182,8 +189,6 @@ body {
   display: flex;
   gap: 0 22px;
   align-items: center;
-}
-.why__img {
 }
 .why__inner-list {
   list-style-type: none;
@@ -211,9 +216,6 @@ body {
 
 
 /* projects */
-.projects {
-  margin-bottom: 110px;
-}
 .projects__text {
   max-width: 593px;
   font-weight: 600;
@@ -225,8 +227,6 @@ body {
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-}
-.projects__gallery-item {
 }
 
 .gallery--item {
@@ -244,7 +244,6 @@ body {
 .services {
   padding: 20px 0 40px;
   background-color: rgba(109, 151, 115, 0.10);
-  margin-bottom: 110px;
 }
 .services__text {
   max-width: 587px;
@@ -260,8 +259,6 @@ body {
   justify-content: space-between;
 
 }
-.services__item {
-}
 .services__item-text {
   padding-top: 20px;
   font-size: 24px;
@@ -269,9 +266,6 @@ body {
 
 
 /* prices */
-.prices {
-  margin-bottom: 150px;
-}
 .prices__text {
   max-width: 740px;
   font-weight: 600;
@@ -289,15 +283,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-
 .prices__item-first {
   font-weight: 600;
   text-align: center;
   font-size: 36px;
   margin-bottom: 40px;
 }
-
 .prices__item {
   max-width: 442px;
   font-size: 24px;
@@ -307,11 +298,9 @@ body {
 .prices__item--left {
   padding-left: 110px;
 }
-
 .prices__item:last-child {
   margin-bottom: 60px;
 }
-
 .prices__item-sum {
   font-weight: 700;
   font-size: 36px;
@@ -326,7 +315,6 @@ body {
   font-size: 16px;
   padding-bottom: 20px;
 }
-
 .prices__item-bntinner {
   display: block;
   padding: 20px;
@@ -335,15 +323,8 @@ body {
   background-color: #FFBA00;
 }
 
-.prices__item-btn {
-
-}
 
 /* work */
-.work {
-  margin-bottom: 150px;
-}
-
 .work__list {
   list-style-type: none;
   counter-reset: my-counter;
@@ -368,25 +349,19 @@ body {
   font-family: "Kaisei Decol", serif;
   font-weight: 400;
   font-size: 128px;
-  letter-spacing: -12.8px;
+  letter-spacing: -8px;
   color: rgba(109, 151, 115, 0.20);
   position: absolute;
   left: 0;
+  -webkit-text-stroke: 1px rgba(109, 151, 115, 0.20);
 }
 
 
 /* team */
-.team {
-  margin-bottom: 150px;
-}
-
 .team__text {
   font-weight: 600;
   font-size: 28px;
   margin-bottom: 50px;
-}
-
-.team__inner {
 }
 .team__list {
   display: flex;
@@ -403,14 +378,9 @@ body {
   text-align: center;
   margin: 10px 0 15px;
 }
-.team__item-descr {
-}
+
 
 /* questions */
-.questions {
-  margin-bottom: 110px;
-}
-
 .accordeon {
   column-count: 2;
   gap: 0 22px;
@@ -447,21 +417,15 @@ body {
 
 
 /* contact-form */
-.contact-form {
-}
 .contact-form__inner {
   display: grid;
   gap: 62px;
   grid-template-columns: repeat(2, 1fr);
 }
-.contact-form__content {
-}
 .contact-form__text {
   font-weight: 600;
   font-size: 28px;
   margin-bottom: 15px;
-}
-.form {
 }
 .form__text {
   max-width: 570px;
@@ -514,7 +478,6 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 .contact-form__img--mod {
   grid-column: 1 / -1;
@@ -524,20 +487,51 @@ body {
 }
 
 
-/* contacts */
-.contacts {
-  margin-bottom: 150px;
+/* reviews */
+.reviews__slider {
+  padding-bottom: 55px;
 }
 
+.reviews__item {
+  font-size: 24px;
+}
+
+.reviews__item-name {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.reviews__item-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.reviews__item-arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.reviews__item-prev {
+  left: 50%;
+  transform: translateX(-65px);
+}
+
+.reviews__item-next {
+  right: 50%;
+  transform: translateX(65px);
+}
+
+
+/* contacts */
 .contacts__inner {
   display: flex;
   gap: 0 22px;
 }
 
-.contacts__img {
-}
-.contacts__content {
-}
 .contacts__text {
   font-size: 28px;
   font-weight: 600;
@@ -547,6 +541,113 @@ body {
   font-size: 20px;
 }
 
-.contacts__info dd {
+.contacts__info dt {
   margin-top: 20px;
 } 
+
+
+/* footer */
+.footer {
+  padding: 40px 0 47px;
+  background-color: rgba(109, 151, 115, 0.1);
+}
+
+.footer__inner {
+  display: flex;
+  gap: 0 22px;
+}
+
+.footer__left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__menu {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.footer__menu-item {
+  margin-bottom: 20px;
+}
+
+.social__list {
+  display: flex;
+  gap: 0 16px;
+}
+
+.footer__right {
+  width: 100%;
+  padding-left: 30px;
+}
+
+.footer__logo img {
+  width: 137px;
+  height: 87px;
+  margin-bottom: 42px;
+}
+
+.footer__text {
+  max-width: 321px;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+
+
+/* MEDIA */
+/* @media (max-width: 1000px) */
+@media (max-width: 1000px) {
+  .section-mb,
+  .section-ms {
+    margin-bottom: 100px;
+  }
+
+  .header-content__img {
+    max-width: 470px;
+  }
+  
+  .header__title {
+    margin-bottom: 40px;
+  }
+
+  .header-content__btn {
+    margin-top: 40px;
+  }
+}
+
+
+/* @media (max-width: 840px) */
+@media (max-width: 840px) {
+  .header-content__img {
+    max-width: 370px;
+  }
+
+  .header__title {
+    font-size: 28px;
+  }
+
+  .menu__btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+
+/* @media (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }  
+}
+
+
+/* @media (max-width: 360px) */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  } 
+}
