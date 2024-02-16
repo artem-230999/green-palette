@@ -1,4 +1,4 @@
-
+sfdsfdf
 \\ Как делалась галлерея
 .projects__gallery {
   display: grid;
