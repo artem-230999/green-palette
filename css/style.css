@@ -234,6 +234,7 @@ body {
   padding: 20px 0;
 }
 .projects__gallery-img {
+  max-width: 100%;
 }
 
 /* services */
